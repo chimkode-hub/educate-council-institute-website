@@ -135,21 +135,14 @@ body {
     color: #04AA6D;
 }
 
-
-
-
-
-
-
-
-
 .contain {
     width: 550px;
     display: flex;
     justify-content: center; /* Center content horizontally */
     align-items: center;
-    min-height: 100vh; /* Use at least the height of the viewport */
+    min-height: 90vh; /* Use at least the height of the viewport */
     padding: 20px;
+   
   }
   
   .con {

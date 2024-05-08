@@ -75,7 +75,8 @@
 
             <div class="input-control">
 
-                <button type="button" onclick="sendemail()">Send</button>
+                <!--<button type="" onclick="sendemail()">Send</button>-->
+                <button type="button" class="hero-btn red-btn" onclick = "sendemail(); reset(); return false">Send Message</button>
             </div>
 
             </form>
@@ -89,7 +90,7 @@
         <div class="popup" id="popup">
          <div class="check">
             <i class="fa fa-check-square" aria-hidden="true"></i>
-            <div class="para">Suceessfull</div>
+            <div class="para">Successfull</div>
             <p>your data successfully received</p>
             <button class="ok" onclick="remove()">OK</button>
          </div>
@@ -113,7 +114,8 @@
 
     </div>
     
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
     <script>
 
         function sendemail(){
@@ -124,14 +126,13 @@
             var mess = document.getElementById("message").value;
 
             var body = "Name :" + name + "<br/>Email :" + email + "<br/>phone number: " + phone + "<br/>User Message:" + mess;
-        
-          
+
             Email.send({
             Host : "smtp.elasticemail.com",
-            Username : "sonychimkode@gmail.com",
-            Password : "00C2848447D111B426AB9D967899D4DDB0C6",
-            To : "sonychimkode@gmail.com",
-            From : "sonychimkode@gmail.com",
+            Username : "chimkodenagamani@gmail.com",
+            Password : "F1A216A771E7D88EAC9F0F4F363907266185",
+            To : "chimkodenagamani@gmail.com",
+            From : "chimkodenagamani@gmail.com",
             Subject : sub,
             Body : body
            }).then(

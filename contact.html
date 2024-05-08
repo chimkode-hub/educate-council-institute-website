@@ -50,28 +50,28 @@
           <div class="card bg-light mb-3" style="max-width: 50rem;">
             <div class="card-header"><b>Address:</b></div>
             <div class="card-body">
-              <h5 class="card-title">No.04, 7th Cross, Near Green Vally School, Om Shiva Shakti Nagar, Konanakunte
-                JP Nagar 7th Phase, Bangalore - 560062</h5>
+              <h5 class="card-title">Your current address,House no, city,
+                Phase, state - 56099062</h5>
             </div>
           </div>
           <div class="card bg-light mb-3" style="max-width: 50rem;">
             <div class="card-header"><b>Email:</b></div>
             <div class="card-body">
-              <h5 class="card-title">shishuvikasfoundation@gmail.com</h5>
+              <h5 class="card-title">xyzabc@gmail.com</h5>
             </div>
           </div>
           <div class="card bg-light mb-3" style="max-width: 50rem;">
             <div class="card-header"><b>Phone number:</b></div>
             <div class="card-body">
-              <h5 class="card-title">+91 7865456786</h5>
-              <h5 class="card-title">+91 7865456786</h5>
-              <h5 class="card-title">+91 7865456786</h5>
+              <h5 class="card-title">+91 8765432986</h5>
+              <h5 class="card-title">+91 6754565434</h5>
+              <h5 class="card-title">+91 8765467654</h5>
 
             </div>
           </div>
         </div>
         
-          <div class="container">
+          <!-- <div class="container">
             <div class="contain">
             <section id="contact" class="contact">
                 <h2>Leave Us a Message</h2>
@@ -88,24 +88,31 @@
                         <label for="message">Message</label>
                         <textarea id="message" name="message" required></textarea>
                     </div>
-                    <!--<button type="submit" class="btn">Send Message</button>-->
-                    <button class="btn btn-primary" type="submit" onclick="sendemail()">Send Message</button>
-                </form>
+                    
+                    <button type="button" class="hero-btn red-btn" onclick = "sendemail(); reset(); return false">Send Message</button>
+                  </form>
             </section>
         </div>
+    </div> -->
+    <div class="container">
+      <div class="contain">
+        <section id="contact" class="contact">
+          <h2>Leave Us a Message</h2>
+    <div class="con-col">
+      
+      <form action="#" method="post">
+          <label for="name"></label>
+          <input type="text" id="name" name="name" placeholder="Enter your Name" required>
+          <label for="email"></label>
+          <input type="email" id="email" name="email" placeholder="Enter your Email" required>
+          <label for="mobile"></label>
+          <textarea rows="6" id="message" name="message" placeholder="Message required"></textarea>
+          <button type="submit" class="hero-btn red-btn"  onclick="sendmail(); reset(); return false;">Send Message</button>
+      </form>
     </div>
+  </div>
+  </div>
         </div>
-          
-
-
-        
-            
-            
-           
-            
-          
-
-
             
 <div class="containers">
   <p class="t">Resize the browser window to see the effect.</p>
@@ -140,16 +147,6 @@
 </div>
 </div>
 </div>
-
-
-
-
-
-
-
-
-
-
 
 <div class="container">
     <h1>Location</h1></div>
@@ -207,19 +204,33 @@
   </footer>
     </footer>
 
-
-
-
-    <script>
-        function myFunction() {
-      var x = document.getElementById("myTopnav");
-      if (x.className === "topnav") {
-        x.className += " responsive";
-      } else {
-        x.className = "topnav";
-      }
-    }
-    </script>
-    
+        <!-- <script -->
+          <script src="https://smtpjs.com/v3/smtp.js">
+          </script>
+          <script>
+              function sendmail(){
+                  var name=document.getElementById("name").value;
+                  var email=document.getElementById("email").value;
+                  var msg=document.getElementById("message").value;
+              
+                  var ebody = `
+                      <b> First name: </b> ${name}
+                      <br/>
+                      <b> Email: </b> ${email}
+                      <br/> 
+                      <b> Message: </b> ${msg}
+                      `
+              
+                  Email.send({
+                      SecureToken : "26860560-a4bf-447a-99c4-6d80d790b56d ",
+                      To : "chimkodenagamani@gmail.com",
+                      From : "chimkodenagamani@gmail.com",
+                      Subject : "This is the subject",
+                      Body : ebody
+                  }).then(
+                  message => alert("message sent")
+                  );
+              }
+              </script>    
 </body>
 </html>

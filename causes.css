@@ -87,14 +87,14 @@ body {
 
   /*image*/
   img {
-    width: 100%; 
+    width: 95%; 
     height: 400px; 
     display: block; 
     margin-left: 20px; 
     margin-right: 20px;
     padding: auto;
     float: left;
-    border-radius: 0px; 
+    border-radius: 10px; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
   }
 
